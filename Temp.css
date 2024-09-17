@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000e14;
+}
+
+
+
+.container {
+    background-color: #001b29;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-family: "Poppins";
+    padding: 20px;
+    width: 89%;
+    max-width: 450px;
+    min-width: 360px;
+    position: relative; 
+    
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.container::after, .container::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    border-radius: 25px;
+    translate: -50% -50%;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    padding: 3px;
+    animation: 3s spin linear infinite;
+}
+
+.container::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.heading {
+    background-image: linear-gradient(42deg, #ff006f 0%, #C850C0 46%, #a314db 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Poppins';
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-size: 36px;
+    flex-wrap: wrap;
+    font-weight: 1000px;
+}
+
+.container1 {
+    color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 20px;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+input {
+    font-family: 'Poppins';
+    width: 250px;
+    float: right;
+    height: 30px;
+    border-radius: 20px;
+    font-weight: 800px;
+    border: 3px solid purple;    
+}
+.formula-box{
+    width:430px;
+    min-height: 200px;
+    border-radius: 20px;
+    background-color: #000e14;
+    border-color: #000e14;
+    padding:16px ;
+    margin-bottom: -2px;
+    margin-top: 10px;
+    
+ 
+    
+
+}
+.formula-box h2 {
+    margin-top: 0;
+}
+.formula-box p {
+    margin: 5px 0;
+}
+h2{
+    color: white;
+    background-image: linear-gradient(42deg, #ff006f 0%, #C850C0 46%, #a314db 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+p{
+    color: rgb(224, 163, 190);
+}
+input::placeholder{
+    background-image: linear-gradient(42deg, #ff006f 0%, #C850C0 46%, #a314db 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 800;
+    
+}
+li{
+    color: rgb(224, 163, 190);
+}
